@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import java.util.Map;
 
 @FeignClient(name = "warehouse-service-1", url = "http:localhost:8083")
-public interface WarehouseService {
+public interface WarehouseServiceClient {
     @PostMapping("/notify")
     Map<String, String>notifyProduct(@RequestBody ProductDetails productDetails);
 }
